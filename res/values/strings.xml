@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">helloworld</string>
+    <string name="hello_string">Hello there, Alamgir</string>
+
+    <string name="instructions">Please push the button to see the icon</string>
+    <string name="button_label">Show File Icon</string>
+    <string name="thanks">The icon should now be shown</string>
+
+</resources>

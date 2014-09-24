@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TableLayout
+            style="@style/WrapContent"
+
+            android:background="#fff"
+            android:stretchColumns="*"
+            android:shrinkColumns="*"
+            >
+
+        <TableRow
+                style="@style/CenteredTableRow"
+                android:background="#ff00"
+                >
+
+            <ImageView
+                    style="@style/FillParent.TableCell"
+
+                    android:src="@drawable/logo"
+                    />
+
+            <ImageView
+                    style="@style/FillParent.TableCell"
+
+                    android:src="@drawable/logo"
+                    />
+
+        </TableRow>
+
+        <TableRow
+                style="@style/CenteredTableRow"
+                android:background="#ff00"
+                >
+
+            <ImageView
+                    style="@style/FillParent.TableCell"
+
+                    android:src="@drawable/logo"
+                    />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <ListView
+            style="@style/FillParent"
+
+            android:id="@+id/listView"
+            ></ListView>
+
+</LinearLayout>

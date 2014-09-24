@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FillParent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="WrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="WrapContent.Margin">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="FullWidth">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="FillParent.MainLayout">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="NormalText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="FullWidth.NormalText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="CenteredTableRow">
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="FillParent.TableCell">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+</resources>
