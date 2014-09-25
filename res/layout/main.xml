@@ -65,11 +65,10 @@
         <LinearLayout
                 style="@style/FillParent"
 
-                android:id="@+id/imageTableContainer"
+                android:id="@+id/list_view_container"
                 android:orientation="vertical"
                 />
-
-    </LinearLayout>
+        </LinearLayout>
 
 
 </LinearLayout>

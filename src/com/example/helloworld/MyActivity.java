@@ -1,17 +1,18 @@
 package com.example.helloworld;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
+import android.view.*;
 import android.view.inputmethod.EditorInfo;
 import android.widget.*;
 import com.example.helloworld.animation.ImageAnimation;
 
 public class MyActivity extends Activity implements View.OnClickListener, View.OnLongClickListener {
+    public LayoutInflater inflater;
 
     public static final String TAG = "LIFECYCLE";
     public boolean liveText = false;
@@ -26,6 +27,7 @@ public class MyActivity extends Activity implements View.OnClickListener, View.O
 
     ImageView fileIcon;
 
+    static LinearLayout listViewContainer;
     ListView listView;
     /**
      * Called when the activity is first created.
@@ -36,9 +38,16 @@ public class MyActivity extends Activity implements View.OnClickListener, View.O
 
         Log.i(TAG, "in onCreate()");
 
+        inflater = getLayoutInflater();
+
         setContentView(R.layout.main);
-        LinearLayout imageTableContainer = (LinearLayout)findViewById(R.id.imageTableContainer);
-        getLayoutInflater().inflate(R.layout.image_table, imageTableContainer);
+        listViewContainer = (LinearLayout)findViewById(R.id.list_view_container);
+
+        if (savedInstanceState == null) {
+            getFragmentManager().beginTransaction()
+                    .add(R.id.list_view_container, new MainFragment())
+                    .commit();
+        }
 
         btnPush = (Button)findViewById(R.id.button1);
         btnPush.setOnClickListener(this);
@@ -84,25 +93,6 @@ public class MyActivity extends Activity implements View.OnClickListener, View.O
             }
         });
 
-        listView = (ListView)findViewById(R.id.listView);
-        final String[] items = {
-                "Journey",
-                "Heart",
-                "Styx",
-                "Foreigner",
-                "Kansas",
-                "Kiss"
-        };
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                                                                android.R.layout.simple_expandable_list_item_1,
-                                                                items);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), items[position], Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override
@@ -139,6 +129,63 @@ public class MyActivity extends Activity implements View.OnClickListener, View.O
     public void onDestroy() {
         Log.i(TAG, "in onDestroy()");
         super.onDestroy();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * A placeholder fragment containing a simple view.
+     */
+    public static class MainFragment extends Fragment {
+
+        public MainFragment() {
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+
+            ListView listView = (ListView)rootView.findViewById(R.id.list_view);
+            final String[] items = {
+                    "Journey",
+                    "Heart",
+                    "Styx",
+                    "Foreigner",
+                    "Kansas",
+                    "Kiss"
+            };
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                    android.R.layout.simple_expandable_list_item_1,
+                    items);
+            listView.setAdapter(adapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                    Toast.makeText(getActivity(), items[position], Toast.LENGTH_SHORT).show();
+                }
+            });
+
+
+            return rootView;
+        }
     }
 
     @Override

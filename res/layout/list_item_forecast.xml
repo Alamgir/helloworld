@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            style="@style/WrapContent"
+
+            android:background="#258EFF"
+            android:stretchColumns="*"
+            android:shrinkColumns="*"
+            >
+
+        <TableRow
+                style="@style/CenteredTableRow"
+                android:layout_height="match_parent"
+                >
+
+            <ImageView
+                    style="@style/FillParent.TableCell"
+
+                    android:id="@+id/list_item_forecast_icon"
+                    />
+
+            <TextView
+                    style="@style/FillParent.TableCell"
+
+                    android:id="@+id/list_item_forecast_day"
+                    />
+
+            <TextView
+                    style="@style/FillParent.TableCell"
+
+                    android:id="@+id/list_item_forecast_temp"
+                    />
+
+
+        </TableRow>
+
+    </TableLayout>
