@@ -13,54 +13,9 @@
 
                 style="@style/NormalText"
 
-                android:text="@string/instructions"
+                android:text=""
                 android:id="@+id/textView"/>
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
 
-                style="@style/NormalText"
-                android:background="@drawable/button_style"
-                android:padding="10dp"
-
-                android:text="@string/button_label"
-                android:id="@+id/button1"/>
-
-        <ImageView
-                style="@style/WrapContent.Margin"
-
-                android:id="@+id/image1"
-                android:src="@drawable/logo"/>
-
-        <ImageView
-                style="@style/WrapContent.Margin"
-
-                android:visibility="invisible"
-
-                android:id="@+id/imageIcon"
-                android:src="@drawable/icon_file"/>
-
-        <Button
-                style="@style/FullWidth.NormalText"
-
-
-                android:text="Interface Button"
-
-                android:id="@+id/interfaceButton"/>
-
-        <ToggleButton
-                style="@style/FullWidth.NormalText"
-                android:textOn="Text is LIVE"
-                android:textOff="Text is DEAD"
-
-                android:id="@+id/liveTextToggle"/>
-
-        <EditText
-                style="@style/FullWidth.NormalText"
-
-                android:text="enter text here"
-
-                android:id="@+id/editText"/>
 
         <LinearLayout
                 style="@style/FillParent"
@@ -68,7 +23,8 @@
                 android:id="@+id/list_view_container"
                 android:orientation="vertical"
                 />
-        </LinearLayout>
+
+    </LinearLayout>
 
 
 </LinearLayout>

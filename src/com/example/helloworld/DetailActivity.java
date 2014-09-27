@@ -6,7 +6,7 @@ import android.os.Bundle;
 /**
  * Created by Alamgir on 9/17/2014.
  */
-public class SecondActivity extends Activity {
+public class DetailActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
