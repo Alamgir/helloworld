@@ -5,6 +5,7 @@ package com.example.helloworld;
  */
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +13,6 @@ import android.view.*;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 import com.example.helloworld.async_tasks.FetchForecastTask;
 import com.fasterxml.jackson.databind.JsonNode;
 
@@ -51,7 +51,11 @@ public class ForecastFragment extends Fragment implements AsyncResponse {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Toast.makeText(getActivity(), adapter.getItem(position), Toast.LENGTH_SHORT).show();
+                //go to detail Activity
+
+                Intent detail = new Intent(getActivity(), DetailActivity.class);
+                detail.putExtra("weather object", adapter.getItem(position));
+                startActivity(detail);
             }
         });
 

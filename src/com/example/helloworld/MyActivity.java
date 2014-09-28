@@ -2,6 +2,7 @@ package com.example.helloworld;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -66,6 +67,12 @@ public class MyActivity extends Activity implements View.OnClickListener, View.O
             e.printStackTrace();
         }
 
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.i(TAG, "new intent");
     }
 
     @Override
