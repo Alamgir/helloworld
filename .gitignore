@@ -1,7 +1,5 @@
 # IGNORE INTELLIJ FILES #
 .idea/
-.idea/*
-!.idea/libraries/
 *.iml
 
 
