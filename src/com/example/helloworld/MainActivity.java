@@ -15,14 +15,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import com.parse.ParseUser;
 
 import java.io.IOException;
 import java.util.List;
 
-public class MyActivity extends Activity implements View.OnClickListener, View.OnLongClickListener {
+public class MainActivity extends Activity implements View.OnClickListener, View.OnLongClickListener {
     public LayoutInflater inflater;
 
-    private static final String TAG = MyActivity.class.getSimpleName();
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     public TextView tv;
 
@@ -124,6 +125,17 @@ public class MyActivity extends Activity implements View.OnClickListener, View.O
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        switch(id) {
+            case R.id.action_logout:
+                ParseUser.logOut();
+                Intent intent = new Intent(this, DispatchActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                break;
+            default:
+                break;
+
+        }
         if (id == R.id.action_settings) {
             return true;
         }

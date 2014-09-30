@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="splash_bg">
+        <item name="android:background">#ffd200</item>
+    </style>
+
+    <style name="splash_bg.no_title_bar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTitleSize">0dp</item>
+    </style>
+
+
+</resources>

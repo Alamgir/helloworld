@@ -4,23 +4,22 @@
           android:versionCode="1"
           android:versionName="1.0">
 
-    <uses-sdk android:minSdkVersion="16"/>
+    <uses-sdk android:minSdkVersion="16"
+              android:targetSdkVersion="19"/>
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+            android:name="Application"
             android:label="@string/app_name"
             android:icon="@drawable/ic_launcher"
             >
 
-        <activity android:name="MyActivity"
-                  android:label="@string/app_name"
-                  android:launchMode="singleTop"
-                  android:windowSoftInputMode="adjustPan"
+        <activity android:name="DispatchActivity"
                   android:screenOrientation="portrait"
-                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:theme="@style/YolkThemeNoActionBar"
                 >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -28,14 +27,39 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".MainActivity"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTop"
+                  android:windowSoftInputMode="adjustPan"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:theme="@style/YolkThemeActionBar"
+                >
+        </activity>
+
         <activity
                 android:name="DetailActivity"
                 android:label="detailView"
-                android:parentActivityName="MyActivity" >
+                android:parentActivityName=".MainActivity" >
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="MyActivity" />
         </activity>
+        <activity android:name=".WelcomeActivity"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:theme="@style/YolkThemeNoActionBar"
+                />
+        <activity android:name=".SignUpActivity"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:theme="@style/YolkThemeNoActionBar"
+                />
+        <activity android:name=".LoginActivity"
+                  android:screenOrientation="portrait"
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:theme="@style/YolkThemeNoActionBar"
+                />
 
     </application>
 

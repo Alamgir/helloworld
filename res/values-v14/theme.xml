@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    Base application theme for API 14+. This theme completely replaces
+    AppBaseTheme from BOTH res/values/theme.xml and
+    res/values-v11/theme.xml on API 14+ devices.
+-->
+    <color name="YolkThemeColor">#ffd200</color>
+    <style name="YolkThemeNoActionBar" parent="@android:style/Theme.Holo.Light.NoActionBar">
+        <item name="android:windowBackground">@color/YolkThemeColor</item>
+        <item name="android:colorBackground">@color/YolkThemeColor</item>
+    </style>
+
+    <style name="YolkThemeActionBar" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/YolkActionBar</item>
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="YolkActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#ffd200</item>
+        <item name="android:titleTextStyle">@style/YolkActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="YolkActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#000</item>
+    </style>
+
+
+</resources>
