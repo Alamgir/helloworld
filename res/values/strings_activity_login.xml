@@ -2,13 +2,13 @@
 <resources>
 
     <!-- Strings related to login -->
-    <string name="title_activity_login">Log in</string>
-    <string name="title_activity_signup">Sign up</string>
-    <string name="prompt_username">Username</string>
-    <string name="prompt_password">Password</string>
-    <string name="prompt_password_again">Password Again</string>
-    <string name="prompt_height">Height (inches)</string>
-    <string name="prompt_weight">Weight (lbs)</string>
+    <string name="title_activity_login">LOG IN</string>
+    <string name="title_activity_signup">SIGN UP</string>
+    <string name="prompt_username">USERNAME</string>
+    <string name="prompt_password">PASSWORD</string>
+    <string name="prompt_password_again">PASSWORD AGAIN</string>
+    <string name="prompt_height">HEIGHT (INCHES)</string>
+    <string name="prompt_weight">WEIGHT (LBS)</string>
 
     <string name="error_intro">"Please "</string>
     <string name="error_blank_username">enter a username</string>

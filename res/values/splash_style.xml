@@ -2,13 +2,23 @@
 <resources>
 
     <style name="splash_bg">
-        <item name="android:background">#ffd200</item>
+        <item name="android:background">@color/YolkThemeColor</item>
+        <item name="android:textColor">@color/YolkFontColorBlack</item>
     </style>
 
-    <style name="splash_bg.no_title_bar">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowTitleSize">0dp</item>
+    <style name="logo_text.splash">
+        <item name="android:layout_gravity">center</item>
     </style>
+
+    <style name="logo_subtext.splash">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="logo_loader.splash">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
 
 
 </resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="logo_text">
+        <item name="android:textSize">50sp</item>
+        <item name="fontPath">fonts/Glober_Heavy.ttf</item>
+        <item name="android:textColor">@color/YolkFontColorBlack</item>
+    </style>
+
+    <style name="logo_subtext">
+        <item name="android:textSize">15sp</item>
+        <item name="fontPath">fonts/Gotham_Light.ttf</item>
+        <item name="android:textColor">@color/YolkFontColorBlack</item>
+    </style>
+
+    <style name="logo_loader">
+        <item name="android:textSize">20sp</item>
+        <item name="fontPath">fonts/Gotham_Book.ttf</item>
+        <item name="android:textColor">@color/YolkFontColorBlack</item>
+    </style>
+
+    <style name="heading_text">
+        <item name="android:textSize">36sp</item>
+        <item name="fontPath">fonts/Gotham_Bold.ttf</item>
+        <item name="android:textColor">@color/YolkFontColorBlack</item>
+    </style>
+
+    <style name="subheading_text">
+        <item name="android:textSize">30sp</item>
+        <item name="fontPath">fonts/Gotham_Book.ttf</item>
+        <item name="android:textColor">@color/YolkFontColorBlack</item>
+    </style>
+
+    <style name="body_text">
+        <item name="android:textSize">24sp</item>
+        <item name="fontPath">fonts/Gotham_Light.ttf</item>
+        <item name="android:textColor">@color/YolkFontColorBlack</item>
+    </style>
+
+    <style name="passive_text">
+        <item name="android:textSize">18sp</item>
+        <item name="fontPath">fonts/Gotham_Book.ttf</item>
+        <item name="android:textColor">@color/YolkFontColorLightGrey</item>
+    </style>
+
+
+</resources>

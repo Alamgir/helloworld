@@ -1,13 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:stretchColumns="*"
 
-              style="@style/splash_bg.no_title_bar"
+              android:gravity="center_vertical"
+
+              style="@style/splash_bg"
         >
 
+    <TableRow>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                style="@style/logo_text.splash"
+
+                android:id="@+id/splash_logo_text"
+
+                />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logo_subtext"
+                style="@style/logo_subtext.splash"
+
+                android:id="@+id/splash_logo_subtext"
+
+                />
 
 
-</LinearLayout>
+    </TableRow>
+
+
+    <TableRow
+            android:layout_marginTop="20dp"
+            >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOADING..."
+                style="@style/logo_loader.splash"
+
+                android:id="@+id/splash_loader"
+
+                />
+
+
+    </TableRow>
+
+
+
+
+
+</TableLayout>

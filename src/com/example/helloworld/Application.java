@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import com.parse.Parse;
 import com.parse.ParseObject;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
  * Created by Alamgir on 9/29/2014.
@@ -25,6 +26,8 @@ public class Application extends android.app.Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        CalligraphyConfig.initDefault("fonts/Gotham_Black.ttf", R.attr.fontPath);
 
         //ParseObject.registerSubclass(AnywallPost.class);
         Parse.initialize(this, "hZa162wrlni6ZvMXamXgZgiSd7ulna1p1zcDZ80E",

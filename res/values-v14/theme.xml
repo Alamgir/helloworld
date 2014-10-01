@@ -7,6 +7,12 @@
     res/values-v11/theme.xml on API 14+ devices.
 -->
     <color name="YolkThemeColor">#ffd200</color>
+    <color name="YolkFontColorBlack">#424242</color>
+    <color name="YolkFontColorLightGrey">#c5c5c5</color>
+    <color name="YolkYellowButtonNormal">#ffe2bb00</color>
+    <color name="YolkYellowButtonPressed">#ffa68900</color>
+
+
     <style name="YolkThemeNoActionBar" parent="@android:style/Theme.Holo.Light.NoActionBar">
         <item name="android:windowBackground">@color/YolkThemeColor</item>
         <item name="android:colorBackground">@color/YolkThemeColor</item>
@@ -14,7 +20,7 @@
 
     <style name="YolkThemeActionBar" parent="@android:style/Theme.Holo.Light">
         <item name="android:actionBarStyle">@style/YolkActionBar</item>
-        <item name="android:textColor">#000</item>
+        <item name="android:textColor">@color/YolkFontColorBlack</item>
     </style>
 
     <style name="YolkActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
@@ -23,7 +29,7 @@
     </style>
 
     <style name="YolkActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
-        <item name="android:textColor">#000</item>
+        <item name="android:textColor">@color/YolkFontColorBlack</item>
     </style>
 
 

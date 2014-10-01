@@ -1,17 +1,20 @@
 package com.example.helloworld;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
 import android.widget.Toast;
+import com.example.helloworld.Utils.CustomFontActivity;
 import com.parse.ParseUser;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * Created by Alamgir on 9/29/2014.
  */
-public class DispatchActivity extends Activity {
+public class DispatchActivity extends CustomFontActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
