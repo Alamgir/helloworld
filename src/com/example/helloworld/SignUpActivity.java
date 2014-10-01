@@ -26,6 +26,10 @@ public class SignUpActivity extends Activity {
     private EditText usernameEditText;
     private EditText passwordEditText;
     private EditText passwordAgainEditText;
+    private EditText heightEditText;
+    private EditText weightEditText;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,9 @@ public class SignUpActivity extends Activity {
 
         // Set up the signup form.
         usernameEditText = (EditText) findViewById(R.id.username_edit_text);
+
+        heightEditText = (EditText) findViewById(R.id.height_edit_text);
+        weightEditText = (EditText) findViewById(R.id.weight_edit_text);
 
         passwordEditText = (EditText) findViewById(R.id.password_edit_text);
         passwordAgainEditText = (EditText) findViewById(R.id.password_again_edit_text);
@@ -63,6 +70,8 @@ public class SignUpActivity extends Activity {
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
         String passwordAgain = passwordAgainEditText.getText().toString().trim();
+        String height = heightEditText.getText().toString().trim();
+        String weight = weightEditText.getText().toString().trim();
 
         // Validate the sign up data
         boolean validationError = false;
@@ -85,6 +94,20 @@ public class SignUpActivity extends Activity {
             validationError = true;
             validationErrorMessage.append(getString(R.string.error_mismatched_passwords));
         }
+        if(height.length() == 0) {
+            if(validationError) {
+                validationErrorMessage.append(getString(R.string.error_join));
+            }
+            validationError = true;
+            validationErrorMessage.append(getString(R.string.error_blank_height));
+        }
+        if(weight.length() == 0) {
+            if(validationError) {
+                validationErrorMessage.append(getString(R.string.error_join));
+            }
+            validationError = true;
+            validationErrorMessage.append(getString(R.string.error_blank_weight));
+        }
         validationErrorMessage.append(getString(R.string.error_end));
 
         // If there is a validation error, display the error
@@ -103,6 +126,8 @@ public class SignUpActivity extends Activity {
         ParseUser user = new ParseUser();
         user.setUsername(username);
         user.setPassword(password);
+        user.put("height",height);
+        user.put("weight",weight);
 
         // Call the Parse signup method
         user.signUpInBackground(new SignUpCallback() {

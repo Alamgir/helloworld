@@ -32,16 +32,36 @@
                     android:singleLine="true" />
 
             <EditText
-                    android:id="@+id/password_again_edit_text"
+                android:id="@+id/password_again_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password_again"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:imeActionId="@+id/edittext_action_signup"
+                android:imeActionLabel="@string/signup"
+                android:imeOptions="actionUnspecified" />
+
+            <EditText
+                    android:id="@+id/height_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password_again"
-                    android:inputType="textPassword"
+                    android:hint="@string/prompt_height"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:imeActionId="@+id/edittext_action_signup"
-                    android:imeActionLabel="@string/signup"
-                    android:imeOptions="actionUnspecified" />
+                    />
+
+            <EditText
+                    android:id="@+id/weight_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_weight"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    />
 
             <Button
                     android:id="@+id/action_button"
