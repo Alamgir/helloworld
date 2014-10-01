@@ -16,9 +16,6 @@ public class DispatchActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
-//        getActionBar().hide();
-
         setContentView(R.layout.dispatch);
 
         new Handler().postDelayed(new Runnable() {
